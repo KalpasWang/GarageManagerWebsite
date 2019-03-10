@@ -44,7 +44,6 @@ nav a:hover{
 }
 
 #content{
-    padding:20px;
     min-height:400px;
+    padding: 10px;
 }
-

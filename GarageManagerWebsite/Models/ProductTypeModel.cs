@@ -67,5 +67,19 @@ namespace GarageManagerWebsite.Models
                 throw;
             }
         }
+
+        public ProductType GetProductTypeById(int id)
+        {
+            try
+            {
+                var productType = garageDBEntities.ProductTypes.Find(id);
+                return productType;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }

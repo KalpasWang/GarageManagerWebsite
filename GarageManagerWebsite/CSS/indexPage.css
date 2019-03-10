@@ -1,2 +1,31 @@
-﻿body {
+﻿#ContentPlaceHolder1_PanelAllProducts div {
+    float:left;
+    width: 250px;
+    height:250px;
+    vertical-align:middle;
+    text-align:center;
+    overflow: hidden;
 }
+
+.productImage {
+    display: block;
+    margin: 0 auto;
+    max-width: 150px;
+    max-height: 150px;
+    width:auto;
+    height:auto;
+    padding: 15px;
+}
+
+.productName {
+    text-align: center;
+    font-size: 1.4em;
+}
+
+.productPrice {
+    text-align: center;
+    font-size: 1.2em;
+    color: mediumvioletred;
+}
+
+

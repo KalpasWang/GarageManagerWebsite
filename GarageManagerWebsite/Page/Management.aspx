@@ -2,10 +2,12 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <asp:Label ID="LabelError" runat="server" ForeColor="Red"></asp:Label>
+    <br />
     <asp:LinkButton ID="LinkButton1" runat="server" CssClass="buttons" PostBackUrl="~/Page/ManageProduct.aspx">New Product</asp:LinkButton>
     <br />
     <br />
-    <asp:GridView ID="GridViewProducts" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="Id" DataSourceID="SqlProductsTable" ForeColor="#333333" GridLines="None" OnRowEditing="GridView1_RowEditing" Caption="Products">
+    <asp:GridView ID="GridViewProducts" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="Id" DataSourceID="SqlProductsTable" ForeColor="#333333" GridLines="None" OnRowEditing="GridView1_RowEditing" Caption="Products" OnRowDataBound="GridViewProducts_RowDataBound" PageSize="7">
         <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
         <Columns>
             <asp:TemplateField ShowHeader="False">
@@ -23,8 +25,16 @@
                 </ItemTemplate>
             </asp:TemplateField>
             <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" />
-            <asp:BoundField DataField="TypeId" HeaderText="Type Id" SortExpression="TypeId" />
             <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
+            <asp:BoundField DataField="TypeId" HeaderText="Type Id" SortExpression="TypeId" />
+            <asp:TemplateField HeaderText="Type Name">
+                <EditItemTemplate>
+                    <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("TypeId") %>'></asp:TextBox>
+                </EditItemTemplate>
+                <ItemTemplate>
+                    <asp:Label ID="Label1" runat="server" Text='<%# Bind("TypeId") %>'></asp:Label>
+                </ItemTemplate>
+            </asp:TemplateField>
             <asp:BoundField DataField="Price" HeaderText="Price" SortExpression="Price" />
             <asp:BoundField DataField="Description" HeaderText="Description" SortExpression="Description" />
             <asp:BoundField DataField="Image" HeaderText="Image" SortExpression="Image" />
