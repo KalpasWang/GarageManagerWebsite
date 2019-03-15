@@ -1,0 +1,16 @@
+﻿.detailImg {
+    width: 300px;
+    height: auto;
+    margin-right: 30px;
+}
+
+.detailDescription {
+    font-size: medium;
+    width: 400px;
+}
+
+.detailPrice {
+    font-weight: bold;
+    font-size: larger;
+    color: chocolate;
+}

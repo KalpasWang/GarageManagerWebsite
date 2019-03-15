@@ -22,7 +22,8 @@
     font-size: 1.4em;
 }
 
-.productPrice {
+.productPrice,
+.productAvailable{
     text-align: center;
     font-size: 1.2em;
     color: mediumvioletred;

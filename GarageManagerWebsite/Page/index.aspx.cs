@@ -30,7 +30,7 @@ namespace GarageManagerWebsite.Page
                     {
                         ImageUrl = "~/Images/Products/" + product.Image,
                         CssClass = "productImage",
-                        PostBackUrl = "~/Page/Product.aspx?id=" + product.Id
+                        PostBackUrl = "~/Page/Details.aspx?id=" + product.Id
                     };
                     Label labelName = new Label
                     {

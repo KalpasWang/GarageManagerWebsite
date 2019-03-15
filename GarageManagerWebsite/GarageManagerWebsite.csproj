@@ -75,6 +75,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CSS\detailsPage.css" />
     <Content Include="CSS\indexPage.css" />
     <Content Include="CSS\MasterStyle.css" />
     <Content Include="Entities\GarageDB.Context.tt">
@@ -104,6 +105,7 @@
     <Content Include="Images\Products\index.jpg" />
     <Content Include="Images\Products\Shock Absorbers.jpg" />
     <Content Include="Page\about.aspx" />
+    <Content Include="Page\Details.aspx" />
     <Content Include="Page\index.aspx" />
     <Content Include="Page\Management.aspx" />
     <Content Include="Page\ManageProduct.aspx" />
@@ -157,6 +159,13 @@
     </Compile>
     <Compile Include="Page\about.aspx.designer.cs">
       <DependentUpon>about.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Details.aspx.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Details.aspx.designer.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
     </Compile>
     <Compile Include="Page\index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>

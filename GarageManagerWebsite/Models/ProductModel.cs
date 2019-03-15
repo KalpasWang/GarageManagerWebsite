@@ -45,7 +45,7 @@ namespace GarageManagerWebsite.Models
                 product.Image = newProduct.Image;
                 product.Price = newProduct.Price;
                 product.TypeId = newProduct.TypeId;
-                product.Description = product.Description;
+                product.Description = newProduct.Description;
 
                 garageDBEntities.SaveChanges();
                 return product.Name + " is successfully updated";

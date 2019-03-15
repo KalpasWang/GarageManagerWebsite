@@ -80,11 +80,13 @@ namespace GarageManagerWebsite.Page
                 {
                     ProductModel model = new ProductModel();
                     Product product = CreateProduct();
-                    int id = Convert.ToInt32(Request.QueryString["id"]);
-                    if (id >= 0)
+                    if (int.TryParse(Request.QueryString["id"], out int id))
                     {
-                        Response.Write("<script>alert('" + model.UpdateProduct(id, product) + 
-                            "'); window.location='Management.aspx';</script>");
+                        if (id > 0)
+                        {
+                            Response.Write("<script>alert('" + model.UpdateProduct(id, product) +
+                                "'); window.location='Management.aspx';</script>");
+                        }
                     }
                     else
                     {
