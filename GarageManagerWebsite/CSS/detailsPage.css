@@ -1,7 +1,7 @@
 ﻿.detailImg {
     width: 300px;
     height: auto;
-    margin-right: 30px;
+    margin: 0 auto;
 }
 
 .detailDescription {

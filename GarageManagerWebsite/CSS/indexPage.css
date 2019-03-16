@@ -1,20 +1,32 @@
-﻿#ContentPlaceHolder1_PanelAllProducts div {
-    float:left;
+﻿/*#ContentPlaceHolder1_PanelAllProducts div {*/
+#ContentPlaceHolder1_PanelAllProducts {
+    padding-top: 50px;
+}
+
+.productContainer {
+    float: left;
     width: 250px;
-    height:250px;
-    vertical-align:middle;
-    text-align:center;
+    height: 250px;
+    vertical-align: middle;
+    text-align: center;
     overflow: hidden;
 }
 
+.imageContainer {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+}
+
+
 .productImage {
     display: block;
-    margin: 0 auto;
+    margin: auto;
     max-width: 150px;
     max-height: 150px;
-    width:auto;
+    /*width:auto;
     height:auto;
-    padding: 15px;
+    /*padding: 15px;*/*/
 }
 
 .productName {

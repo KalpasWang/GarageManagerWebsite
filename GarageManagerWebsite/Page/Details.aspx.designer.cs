@@ -31,13 +31,13 @@ namespace GarageManagerWebsite.Page {
         protected global::System.Web.UI.WebControls.Label lblTitle;
         
         /// <summary>
-        /// lblDescription 控制項。
+        /// lblProductID 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDescription;
+        protected global::System.Web.UI.WebControls.Label lblProductID;
         
         /// <summary>
         /// lblPrice 控制項。
@@ -58,6 +58,15 @@ namespace GarageManagerWebsite.Page {
         protected global::System.Web.UI.WebControls.DropDownList ddlAmount;
         
         /// <summary>
+        /// lblAvailable 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblAvailable;
+        
+        /// <summary>
         /// btnAdd 控制項。
         /// </summary>
         /// <remarks>
@@ -67,30 +76,12 @@ namespace GarageManagerWebsite.Page {
         protected global::System.Web.UI.WebControls.Button btnAdd;
         
         /// <summary>
-        /// lblResult 控制項。
+        /// lblDescription 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblResult;
-        
-        /// <summary>
-        /// lblProductID 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblProductID;
-        
-        /// <summary>
-        /// lblAvailable 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblAvailable;
+        protected global::System.Web.UI.WebControls.Label lblDescription;
     }
 }

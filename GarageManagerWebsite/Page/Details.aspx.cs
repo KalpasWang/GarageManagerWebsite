@@ -29,7 +29,7 @@ namespace GarageManagerWebsite.Page
             lblTitle.Text = product.Name;
             imgProduct.ImageUrl = "~/Images/Products/" + product.Image;
             lblDescription.Text = product.Description;
-            lblPrice.Text = "Price: " + string.Format(new System.Globalization.CultureInfo("zh-TW"), "{0:c}", product.Price);
+            lblPrice.Text = string.Format(new System.Globalization.CultureInfo("zh-TW"), "{0:c}", product.Price);
 
             int[] amount = Enumerable.Range(1, 10).ToArray();
             ddlAmount.DataSource = amount;

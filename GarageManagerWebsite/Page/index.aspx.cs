@@ -25,7 +25,14 @@ namespace GarageManagerWebsite.Page
             {
                 foreach(Product product in products)
                 {
-                    Panel panelProduct = new Panel();
+                    Panel panelProduct = new Panel
+                    {
+                        CssClass = "productContainer"
+                    };
+                    Panel panelImg = new Panel
+                    {
+                        CssClass = "imageContainer"
+                    };
                     ImageButton imageButton = new ImageButton
                     {
                         ImageUrl = "~/Images/Products/" + product.Image,
@@ -43,7 +50,9 @@ namespace GarageManagerWebsite.Page
                         CssClass = "productPrice"
                     };
 
-                    panelProduct.Controls.Add(imageButton);
+                    panelImg.Controls.Add(imageButton);
+                    panelProduct.Controls.Add(panelImg);
+                    //panelProduct.Controls.Add(imageButton);
                     panelProduct.Controls.Add(new Literal { Text = "<br/>" });
                     panelProduct.Controls.Add(labelName);
                     panelProduct.Controls.Add(new Literal { Text = "<br/>" });
