@@ -8,18 +8,13 @@
             <td  style="width: 50%; min-height: 300px;">
                 <asp:image runat="server" ID="imgProduct" CssClass="detailImg"></asp:image>
             </td>
-            <td colspan="2">
-                <hr />
-            </td>
+
             <td>
-                <table style="width: 100%;">
+                <h1><asp:label runat="server" ID="lblTitle"></asp:label></h1>
+                <br /><br />
+                <table style="width: 100%; background-color: lightgray; border-radius: 5px; padding: 10px;">
                     <tr>
-                        <td colspan="2">
-                            <h2><asp:label runat="server" ID="lblTitle"></asp:label></h2>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Product ID:</td>
+                        <td style="width: 40%">Product ID:</td>
                         <td><asp:label runat="server" ID="lblProductID"></asp:label></td>
                     </tr>
                     <tr>
@@ -32,50 +27,18 @@
                     </tr>
                 </table>
                 <br /><br />
-                <asp:label runat="server" ID="lblAvailable" CssClass="productAvailable">Available</asp:label>
-                <br />
-                <asp:button runat="server" text="Add" ID="btnAdd" CssClass="button"/>
+                <asp:label runat="server" ID="lblAvailable" CssClass="productAvailable">Available!</asp:label>
+                <br /><br />
+                <asp:button runat="server" text="Add to cart" ID="btnAdd" CssClass="button"/>
             </td>
+        </tr>
+        <tr>
+            <td colspan="2"><hr /></td>
         </tr>
         <tr>
             <td colspan="2">
                 <asp:label runat="server" ID="lblDescription" CssClass="detailDescription"></asp:label>
             </td>
         </tr>
-        <%--<tr>
-            <td rowspan="4">
-                <asp:image runat="server" ID="imgProduct" CssClass="detailImg"></asp:image>
-            </td>
-            <td>
-                <h2>
-                    <asp:label runat="server" ID="lblTitle"></asp:label>
-                </h2>
-                <hr />
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <asp:label runat="server" ID="lblDescription" CssClass="detailDescription"></asp:label>
-            </td>
-            <td>
-                <asp:label runat="server" ID="lblPrice" CssClass="detailPrice"></asp:label>
-                <br />
-                Amount:&nbsp;<asp:dropdownlist runat="server" ID="ddlAmount"></asp:dropdownlist>
-                <br />
-                <asp:button runat="server" text="Add" ID="btnAdd" CssClass="button"/>
-                <br />
-                <asp:label runat="server" ID="lblResult"></asp:label>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Product ID:&nbsp;<asp:label runat="server" ID="lblProductID"></asp:label>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <asp:label runat="server" ID="lblAvailable" CssClass="productAvailable">Available</asp:label>
-            </td>
-        </tr>--%>
     </table>
 </asp:Content>

@@ -24,9 +24,6 @@
     margin: auto;
     max-width: 150px;
     max-height: 150px;
-    /*width:auto;
-    height:auto;
-    /*padding: 15px;*/*/
 }
 
 .productName {
@@ -34,11 +31,10 @@
     font-size: 1.4em;
 }
 
-.productPrice,
-.productAvailable{
+.productPrice {
     text-align: center;
     font-size: 1.2em;
+    font-weight: bold;
     color: mediumvioletred;
 }
-
 

@@ -5,7 +5,9 @@
 }
 
 .detailDescription {
-    font-size: medium;
+    margin-top: 20px;
+    font-size: 1.4em;
+    line-height: 1.2;
     width: 400px;
 }
 
@@ -13,4 +15,11 @@
     font-weight: bold;
     font-size: larger;
     color: chocolate;
+}
+
+.productAvailable {
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: mediumvioletred;
 }
