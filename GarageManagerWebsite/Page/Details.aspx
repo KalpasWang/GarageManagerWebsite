@@ -12,7 +12,7 @@
             <td>
                 <h1><asp:label runat="server" ID="lblTitle"></asp:label></h1>
                 <br /><br />
-                <table style="width: 100%; background-color: lightgray; border-radius: 5px; padding: 10px;">
+                <table class="detailTable">
                     <tr>
                         <td style="width: 40%">Product ID:</td>
                         <td><asp:label runat="server" ID="lblProductID"></asp:label></td>
@@ -29,7 +29,10 @@
                 <br /><br />
                 <asp:label runat="server" ID="lblAvailable" CssClass="productAvailable">Available!</asp:label>
                 <br /><br />
-                <asp:button runat="server" text="Add to cart" ID="btnAdd" CssClass="button"/>
+                <asp:button runat="server" text="Add to cart" ID="btnAdd" CssClass="button" OnClick="btnAdd_Click"/>
+                <br />
+                <br />
+                <asp:Label ID="LabelResult" runat="server"></asp:Label>
             </td>
         </tr>
         <tr>

@@ -4,8 +4,17 @@
     margin: 0 auto;
 }
 
+.detailTable {
+    width: 100%;
+    background-color: lightgray;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
 .detailDescription {
-    margin-top: 20px;
+    margin-top: 30px;
     font-size: 1.4em;
     line-height: 1.2;
     width: 400px;
@@ -13,13 +22,11 @@
 
 .detailPrice {
     font-weight: bold;
-    font-size: larger;
     color: chocolate;
 }
 
 .productAvailable {
     text-align: center;
     font-size: 1.2em;
-    font-weight: bold;
     color: mediumvioletred;
 }
