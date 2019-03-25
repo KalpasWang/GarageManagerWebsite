@@ -33,7 +33,7 @@
     <p>
         Description:</p>
     <p>
-        <asp:TextBox ID="TextBoxDescription" runat="server" Height="52px" TextMode="MultiLine" ></asp:TextBox>
+        <asp:TextBox ID="TextBoxDescription" runat="server" Height="100px" TextMode="MultiLine" Width="330px" ></asp:TextBox>
     </p>
     <p>
         <asp:Button ID="Button1" runat="server" Text="Submit" OnClick="Button1_Click"/>
