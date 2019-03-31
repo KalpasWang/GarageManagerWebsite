@@ -34,13 +34,30 @@ namespace GarageManagerWebsite.Page.Account
                 try
                 {
                     IdentityResult result = userManager.Create(user, TextBoxPassword.Text);
+                    if(result.Succeeded)
+                    {
+                        var authenticationManager = HttpContext.Current.GetOwinContext().Authentication;
+                        
+                        // store user in DB
+                        var claimsIdentity = userManager.CreateIdentity(user, DefaultAuthenticationTypes.ApplicationCookie);
+
+                        // log in new user and set a cookie then redirect 
+                        authenticationManager.SignIn(new AuthenticationProperties(), claimsIdentity);
+                        Response.Redirect("~/Page/index.aspx");
+                    }
+                    else
+                    {
+                        LiteralResult.Text = result.Errors.FirstOrDefault();
+                    }
                 }
-                catch
-                { }
+                catch(Exception ex)
+                {
+                    LiteralResult.Text = ex.ToString();
+                }
             }
             else
             {
-                LiteralResult.Text = "Password must match";
+                LiteralResult.Text = "Passwords must match";
             }
 
         }

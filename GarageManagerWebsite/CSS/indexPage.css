@@ -15,13 +15,15 @@
 .imageContainer {
     width: 150px;
     height: 150px;
-    margin: 0 auto;
+    margin: auto;
 }
 
 
 .productImage {
     display: block;
-    margin: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 0;
     max-width: 150px;
     max-height: 150px;
 }

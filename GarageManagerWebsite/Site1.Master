@@ -23,6 +23,15 @@
                         <li><asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="Page/about.aspx">About Us</asp:HyperLink></li>
                         <li><asp:HyperLink ID="HyperLink3" runat="server">Reports</asp:HyperLink></li>
                         <li><asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/Page/Management.aspx">Management</asp:HyperLink></li>
+
+                        <li style="float: right;">
+                            <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/Page/Account/login.aspx">Login</asp:HyperLink>
+                            <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Log Out</asp:LinkButton>
+                        </li>
+                        <li style="float: right;">
+                            <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/Page/Account/register.aspx">Register</asp:HyperLink>
+                            <asp:Literal ID="LiteralName" runat="server"></asp:Literal>
+                        </li>
                     </ul>
                 </nav>
                 <section id="content">

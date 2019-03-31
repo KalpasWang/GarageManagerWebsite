@@ -17,7 +17,7 @@ namespace GarageManagerWebsite.Models
             app.UseCookieAuthentication(new CookieAuthenticationOptions
             {
                 AuthenticationType = DefaultAuthenticationTypes.ApplicationCookie,
-                LoginPath = new PathString("~/Page/Account/login.aspx")
+                LoginPath = new PathString("/Page/Account/login.aspx")
             });
         }
     }
