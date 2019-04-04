@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Details.aspx.cs" Inherits="GarageManagerWebsite.Page.Details" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" MaintainScrollPositionOnPostback="true" AutoEventWireup="true" CodeBehind="Details.aspx.cs" Inherits="GarageManagerWebsite.Page.Details" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="../CSS/detailsPage.css" rel="stylesheet" />
 </asp:Content>
@@ -14,7 +14,7 @@
                 <br /><br />
                 <table class="detailTable">
                     <tr>
-                        <td style="width: 40%">Product ID:</td>
+                        <td style="width: 50%">Product ID:</td>
                         <td><asp:label runat="server" ID="lblProductID"></asp:label></td>
                     </tr>
                     <tr>
@@ -32,7 +32,7 @@
                 <asp:button runat="server" text="Add to cart" ID="btnAdd" CssClass="button" OnClick="btnAdd_Click"/>
                 <br />
                 <br />
-                <asp:Label ID="LabelResult" runat="server"></asp:Label>
+                <asp:Label ID="LabelResult" runat="server" ForeColor="#33CC33"></asp:Label>
             </td>
         </tr>
         <tr>

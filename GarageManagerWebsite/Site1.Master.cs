@@ -11,12 +11,32 @@ namespace GarageManagerWebsite
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            var userIdentity = Context.User.Identity;
+            if(userIdentity.IsAuthenticated)
+            {
+                LiteralUserName.Text = userIdentity.Name;
 
+                LinkButtonLogOut.Visible = true;
+                LiteralUserName.Visible = true;
+
+                HyperLinkLogin.Visible = false;
+                HyperLinkRegister.Visible = false;
+            }
+            else
+            {
+                LinkButtonLogOut.Visible = false;
+                LiteralUserName.Visible = false;
+
+                HyperLinkLogin.Visible = true;
+                HyperLinkRegister.Visible = true;
+            }
         }
 
-        protected void LinkButton1_Click(object sender, EventArgs e)
+        protected void LinkButtonLogOut_Click(object sender, EventArgs e)
         {
-
+            var authenticationManager = HttpContext.Current.GetOwinContext().Authentication;
+            authenticationManager.SignOut();
+            Response.Redirect("~/Page/index.aspx");
         }
     }
 }
