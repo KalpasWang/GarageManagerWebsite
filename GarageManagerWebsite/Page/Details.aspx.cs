@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using GarageManagerWebsite.Models;
 using GarageManagerWebsite.Entities;
+using Microsoft.AspNet.Identity;
 
 namespace GarageManagerWebsite.Page
 {
@@ -48,22 +49,30 @@ namespace GarageManagerWebsite.Page
             try
             {
                 if(!string.IsNullOrWhiteSpace(Request.QueryString["id"]))
-                {
-                    PurchaseModel model = new PurchaseModel();
-                    int clientId = -1;
-                    int productId = Convert.ToInt32(Request.QueryString["id"]);
-                    int amount = Convert.ToInt32(ddlAmount.SelectedValue);
+                {                   
+                    string clientId = User.Identity.GetUserId();
 
-                    Purchase newPurchase = new Purchase
+                    if (clientId != null)
                     {
-                        CustomerId = clientId,
-                        ProductId = productId,
-                        Amount = amount,
-                        DatePurchased = DateTime.Now,
-                        IsInCart = true
-                    };
+                        int productId = Convert.ToInt32(Request.QueryString["id"]);
+                        int amount = Convert.ToInt32(ddlAmount.SelectedValue);
 
-                    LabelResult.Text = model.AddPurchase(newPurchase);
+                        Purchase newPurchase = new Purchase
+                        {
+                            CustomerId = clientId,
+                            ProductId = productId,
+                            Amount = amount,
+                            DatePurchased = DateTime.Now,
+                            IsInCart = true
+                        };
+
+                        PurchaseModel model = new PurchaseModel();
+                        LabelResult.Text = model.AddPurchase(newPurchase);
+                    }
+                    else
+                    {
+                        Response.Redirect("~/Page/Account/login.aspx");
+                    }
                 }
 
             }
