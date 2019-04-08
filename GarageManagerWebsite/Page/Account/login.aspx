@@ -10,7 +10,7 @@
     <br />
     <br />
     Password:<br />
-    <asp:TextBox ID="TextBoxPassword" runat="server" CssClass="inputs"></asp:TextBox>
+    <asp:TextBox ID="TextBoxPassword" runat="server" CssClass="inputs" TextMode="Password"></asp:TextBox>
     <br />
     <br />
     <asp:Button ID="Button1" runat="server" CssClass="button" OnClick="Button1_Click" Text="Submit" />

@@ -14,7 +14,7 @@ namespace GarageManagerWebsite.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!string.IsNullOrWhiteSpace(Request.QueryString["id"]))
+            if (!string.IsNullOrWhiteSpace(Request.QueryString["id"]) && !IsPostBack)
             {
                 int id = Convert.ToInt32(Request.QueryString["id"]);
                 FillPageWithProductId(id);

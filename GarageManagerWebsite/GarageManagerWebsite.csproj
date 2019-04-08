@@ -171,13 +171,13 @@
       <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="Entities\Product.cs">
-      <DependentUpon>GarageDBModel.tt</DependentUpon>
+      <DependentUpon>GarageDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Entities\ProductType.cs">
-      <DependentUpon>GarageDBModel.tt</DependentUpon>
+      <DependentUpon>GarageDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Entities\Purchase.cs">
-      <DependentUpon>GarageDBModel.tt</DependentUpon>
+      <DependentUpon>GarageDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

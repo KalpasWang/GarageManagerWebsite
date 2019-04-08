@@ -15,7 +15,7 @@ namespace GarageManagerWebsite.Entities
     public partial class Purchase
     {
         public int Id { get; set; }
-        public int CustomerId { get; set; }
+        public string CustomerId { get; set; }
         public int ProductId { get; set; }
         public int Amount { get; set; }
         public Nullable<System.DateTime> DatePurchased { get; set; }
