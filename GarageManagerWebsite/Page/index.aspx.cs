@@ -25,6 +25,20 @@ namespace GarageManagerWebsite.Page
             {
                 foreach(Product product in products)
                 {
+                    LinkButton linkButton = new LinkButton
+                    {
+                        CssClass="productContainer",
+                        Text = "<div class='imageContainer'>" +
+                               "<img class='productImage' src='../Images/Products/" + product.Image + "'/>" +
+                               "<span class='productName'>" + product.Name + "</span><br/>" +
+                               "<span class='productPrice'>" + string.Format("{0:c}", product.Price) + "</span>" +
+                               "</div>",
+                        PostBackUrl = "~/Page/Details.aspx?id=" + product.Id
+
+                    };
+
+                    PanelAllProducts.Controls.Add(linkButton);
+                    /*
                     Panel panelProduct = new Panel
                     {
                         CssClass = "productContainer"
@@ -60,6 +74,7 @@ namespace GarageManagerWebsite.Page
 
 
                     PanelAllProducts.Controls.Add(panelProduct);
+                    */
                 }
             }
         }

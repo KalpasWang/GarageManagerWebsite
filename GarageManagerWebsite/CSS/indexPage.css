@@ -1,29 +1,43 @@
 ﻿/*#ContentPlaceHolder1_PanelAllProducts div {*/
+section#content {
+    background: #f1f1f1;
+}
+
 #ContentPlaceHolder1_PanelAllProducts {
     padding-top: 50px;
 }
 
 .productContainer {
     float: left;
-    width: 250px;
+    width: 170px;
     height: 250px;
     vertical-align: middle;
+    text-decoration: none;
     text-align: center;
     overflow: hidden;
+    margin: 10px;
+    background: #fff;
+}
+
+.productContainer:hover {
+    text-decoration: underline;
 }
 
 .imageContainer {
     width: 150px;
     height: 150px;
-    margin: auto;
+    margin: 10px auto;
+    position: relative;
 }
 
 
 .productImage {
-    display: block;
-    margin-top: auto;
-    margin-bottom: auto;
-    padding: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
     max-width: 150px;
     max-height: 150px;
 }
@@ -31,6 +45,7 @@
 .productName {
     text-align: center;
     font-size: 1.4em;
+    color: #111;
 }
 
 .productPrice {
