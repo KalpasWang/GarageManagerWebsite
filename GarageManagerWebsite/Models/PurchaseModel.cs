@@ -69,5 +69,78 @@ namespace GarageManagerWebsite.Models
                 return e.Message;
             }
         }
+
+        public List<Purchase> GetOrdersInCart(string customerId)
+        {
+            try
+            {
+                var orders = (from x in garageDBEntities.Purchases
+                              where x.CustomerId == customerId
+                              && x.IsInCart
+                              orderby x.DatePurchased
+                              select x).ToList();
+                return orders;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public int GetAmountOfOrders(string customerId)
+        {
+            try
+            {
+                var amount = (from x in garageDBEntities.Purchases
+                              where x.CustomerId == customerId
+                              && x.IsInCart
+                              select x.Amount).Sum();
+                return amount;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            
+        }
+
+        public void UpdataAmount(int purchaseId, int amount)
+        {
+            try
+            {
+                var Purchase = garageDBEntities.Purchases.Find(purchaseId);
+                Purchase.Amount = amount;
+                garageDBEntities.SaveChanges();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public void MarkOrdersAsPaid(List<Purchase> orders)
+        {
+            try
+            {
+                if(orders != null)
+                {
+                    foreach(var order in orders)
+                    {
+                        var purchase = garageDBEntities.Purchases.Find(order.Id);
+                        purchase.IsInCart = false;
+                        purchase.DatePurchased = DateTime.Now;
+                        garageDBEntities.SaveChanges();
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }

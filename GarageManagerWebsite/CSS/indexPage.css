@@ -1,5 +1,5 @@
 ﻿/*#ContentPlaceHolder1_PanelAllProducts div {*/
-section#content {
+#content {
     background: #f1f1f1;
 }
 
@@ -9,8 +9,8 @@ section#content {
 
 .productContainer {
     float: left;
-    width: 170px;
-    height: 250px;
+    width: 230px;
+    height: 2700px;
     vertical-align: middle;
     text-decoration: none;
     text-align: center;
@@ -19,13 +19,14 @@ section#content {
     background: #fff;
 }
 
-.productContainer:hover {
-    text-decoration: underline;
+.productContainer a {
+    text-decoration: none;
+    color: #111;
 }
 
 .imageContainer {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     margin: 10px auto;
     position: relative;
 }
@@ -46,6 +47,10 @@ section#content {
     text-align: center;
     font-size: 1.4em;
     color: #111;
+}
+
+.productName:hover {
+    text-decoration: underline;
 }
 
 .productPrice {
