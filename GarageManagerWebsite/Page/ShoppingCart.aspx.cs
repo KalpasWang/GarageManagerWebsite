@@ -48,6 +48,7 @@ namespace GarageManagerWebsite.Page
         private void LayoutProductsTable(List<Purchase> ordersList, out double price)
         {
             ProductModel model = new ProductModel();
+            price = new double();
 
             foreach (var purchase in ordersList)
             {
@@ -94,19 +95,55 @@ namespace GarageManagerWebsite.Page
                 TableCell cellB2 = new TableCell { Text = string.Format("{0:c}", product.Price) };
                 TableCell cellB3 = new TableCell();
                 TableCell cellB4 = new TableCell { Text = string.Format("{0:c2}", product.Price*purchase.Amount) };
-                TableCell cellB5 = new TableCell();
 
+                cellA1.Controls.Add(imageButton);
+                cellB3.Controls.Add(ddlAmount);
+                cellA6.Controls.Add(linkDelete);
+
+                rowA.Controls.Add(cellA1);
+                rowA.Controls.Add(cellA2);
+                rowA.Controls.Add(cellA3);
+                rowA.Controls.Add(cellA4);
+                rowA.Controls.Add(cellA5);
+                rowA.Controls.Add(cellA6);
+
+                rowB.Controls.Add(cellB1);
+                rowB.Controls.Add(cellB2);
+                rowB.Controls.Add(cellB3);
+                rowB.Controls.Add(cellB4);
+
+                cartTable.Controls.Add(rowA);
+                cartTable.Controls.Add(rowB);
+
+                PanelCart.Controls.Add(cartTable);
+
+                price += product.Price * purchase.Amount;
             }
+            Session[User.Identity.GetUserId()] = ordersList;
         }
 
         private void ddlAmount_SelectedIndexChanged(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            try
+            {
+                DropDownList ddl = sender as DropDownList;
+                PurchaseModel model = new PurchaseModel();
+
+                model.UpdataAmount(Convert.ToInt32(ddl.ID), Convert.ToInt32(ddl.SelectedValue));
+            }
+            catch (Exception ex)
+            {
+                LabelError.Text = ex.ToString();
+            }
         }
 
         private void linkDelete_DeleteItem(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            LinkButton button = sender as LinkButton;
+            int purchaseId = Convert.ToInt32(button.ID.Replace("del", string.Empty));
+
+            PurchaseModel model = new PurchaseModel();
+            model.DeletePurchase(purchaseId);
         }
     }
 }

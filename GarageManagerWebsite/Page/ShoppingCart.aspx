@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:label runat="server" ID="LabelError" text="" ForeColor="Red"></asp:label>
-    <asp:panel runat="server"></asp:panel>
+    <asp:panel runat="server" ID="PanelCart"></asp:panel>
 
     <table>
         <tr>

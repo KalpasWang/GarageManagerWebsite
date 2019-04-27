@@ -1,6 +1,7 @@
 ﻿/*#ContentPlaceHolder1_PanelAllProducts div {*/
 #content {
     background: #f1f1f1;
+    margin: 0 auto;
 }
 
 #ContentPlaceHolder1_PanelAllProducts {
@@ -10,7 +11,7 @@
 .productContainer {
     float: left;
     width: 230px;
-    height: 2700px;
+    height: 270px;
     vertical-align: middle;
     text-decoration: none;
     text-align: center;
