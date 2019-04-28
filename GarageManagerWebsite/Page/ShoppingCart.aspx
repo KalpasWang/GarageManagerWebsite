@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="ShoppingCart.aspx.cs" Inherits="GarageManagerWebsite.Page.ShoppingCart" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <link href="../CSS/CartPage.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:label runat="server" ID="LabelError" text="" ForeColor="Red"></asp:label>
@@ -30,6 +31,7 @@
                 <asp:literal ID="LiteralTotal" runat="server"></asp:literal>
             </td>
         </tr>
+        <br /><br />
         <tr>
             <td>
                 <asp:button runat="server" ID="ButtonContinue" text="Continue Shopping" CssClass="button"/>

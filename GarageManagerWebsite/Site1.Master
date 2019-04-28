@@ -30,7 +30,8 @@
                         </li>
                         <li style="float: right;">
                             <asp:HyperLink ID="HyperLinkRegister" runat="server" NavigateUrl="~/Page/Account/register.aspx">Register</asp:HyperLink>
-                            <asp:Literal ID="LiteralUserName" runat="server"></asp:Literal>
+                            <%--<asp:Literal ID="LiteralUserName" runat="server"></asp:Literal>--%>
+                            <asp:HyperLink ID="HyperLinkUserName" runat="server" NavigateUrl="~/Page/ShoppingCart.aspx"></asp:HyperLink>
                         </li>
                     </ul>
                 </nav>

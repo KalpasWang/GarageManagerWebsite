@@ -56,8 +56,9 @@ namespace GarageManagerWebsite.Page
 
                 ImageButton imageButton = new ImageButton
                 {
-                    ImageUrl = product.Image,
-                    PostBackUrl = "~/Page/Details.aspx?id=" + product.Id
+                    ImageUrl = "../Images/Products/" + product.Image,
+                    PostBackUrl = "~/Page/Details.aspx?id=" + product.Id,
+                    Width = 50
                 };
 
                 LinkButton linkDelete = new LinkButton
@@ -85,7 +86,7 @@ namespace GarageManagerWebsite.Page
                 TableRow rowB = new TableRow();
 
                 TableCell cellA1 = new TableCell { RowSpan = 2, Width = 50 };
-                TableCell cellA2 = new TableCell { Text = $"<h4>{product.Name}</h4><br/>{product.Id}<br/>In Stock" };
+                TableCell cellA2 = new TableCell { Text = $"<h4>{product.Name}</h4><br/>Product ID: {product.Id}<br/>In Stock" };
                 TableCell cellA3 = new TableCell { Text = "Unit Price:<hr>" };
                 TableCell cellA4 = new TableCell { Text = "Amount:<hr>" };
                 TableCell cellA5 = new TableCell { Text = "Total:<hr>" };
