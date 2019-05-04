@@ -14,12 +14,11 @@ namespace GarageManagerWebsite.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-                string userId = User.Identity.GetUserId();
-                GetPurchasesListInCart(userId);
-            }
+            string userId = User.Identity.GetUserId();
+            GetPurchasesListInCart(userId);
         }
+
+        
 
         private void GetPurchasesListInCart(string userId)
         {
@@ -85,8 +84,8 @@ namespace GarageManagerWebsite.Page
                 TableRow rowA = new TableRow();
                 TableRow rowB = new TableRow();
 
-                TableCell cellA1 = new TableCell { RowSpan = 2, Width = 50 };
-                TableCell cellA2 = new TableCell { Text = $"<h4>{product.Name}</h4><br/>Product ID: {product.Id}<br/>In Stock" };
+                TableCell cellA1 = new TableCell { RowSpan = 2 };
+                TableCell cellA2 = new TableCell { Text = $"<h4>{product.Name}</h4>Product ID: {product.Id}<br/>In Stock" };
                 TableCell cellA3 = new TableCell { Text = "Unit Price:<hr>" };
                 TableCell cellA4 = new TableCell { Text = "Amount:<hr>" };
                 TableCell cellA5 = new TableCell { Text = "Total:<hr>" };
@@ -131,6 +130,7 @@ namespace GarageManagerWebsite.Page
                 PurchaseModel model = new PurchaseModel();
 
                 model.UpdataAmount(Convert.ToInt32(ddl.ID), Convert.ToInt32(ddl.SelectedValue));
+                Response.Redirect("~/Page/ShoppingCart.aspx");
             }
             catch (Exception ex)
             {

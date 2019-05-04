@@ -2,13 +2,13 @@
     width: 100%;
     border: 15px solid #ddd;
     margin-bottom: 10px;
-    padding: 10px;
+    padding: 5px;
     text-align: center;
     font-size: 1.2em;
 }
 
 .cartTable input[type="image"] {
-    width: 70px;
+    width: 75px;
     height: auto;
 }
 

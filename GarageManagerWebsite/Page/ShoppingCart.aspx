@@ -8,7 +8,7 @@
 
     <table>
         <tr>
-            <td>Price:</td>
+            <td style="width: 150px;">Price:</td>
             <td>
                 <asp:literal ID="LiteralPrice" runat="server"></asp:literal>
             </td>
@@ -31,12 +31,11 @@
                 <asp:literal ID="LiteralTotal" runat="server"></asp:literal>
             </td>
         </tr>
-        <br /><br />
-        <tr>
-            <td>
-                <asp:button runat="server" ID="ButtonContinue" text="Continue Shopping" CssClass="button"/>
-                <asp:button runat="server" ID="ButtonCheckOut" text="Check Out" CssClass="button"/>
-            </td>
-        </tr>
     </table>
+    <br /><br />
+    <div>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:button runat="server" ID="ButtonContinue" text="Continue Shopping" CssClass="button"/>
+        <asp:button runat="server" ID="ButtonCheckOut" text="Check Out" CssClass="button"/>
+    </div>
 </asp:Content>
