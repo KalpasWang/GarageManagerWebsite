@@ -143,6 +143,7 @@
     <Content Include="Page\Management.aspx" />
     <Content Include="Page\ManageProduct.aspx" />
     <Content Include="Page\ManageProductType.aspx" />
+    <Content Include="Page\PurchaseSuccess.aspx" />
     <Content Include="Page\ShoppingCart.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -243,6 +244,13 @@
     </Compile>
     <Compile Include="Page\ManageProductType.aspx.designer.cs">
       <DependentUpon>ManageProductType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\PurchaseSuccess.aspx.cs">
+      <DependentUpon>PurchaseSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\PurchaseSuccess.aspx.designer.cs">
+      <DependentUpon>PurchaseSuccess.aspx</DependentUpon>
     </Compile>
     <Compile Include="Page\ShoppingCart.aspx.cs">
       <DependentUpon>ShoppingCart.aspx</DependentUpon>

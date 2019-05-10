@@ -14,8 +14,13 @@ namespace GarageManagerWebsite.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string userId = User.Identity.GetUserId();
-            GetPurchasesListInCart(userId);
+            if (User.Identity.IsAuthenticated)
+            {
+                string userId = User.Identity.GetUserId();
+                GetPurchasesListInCart(userId);
+            }
+            else
+            { Response.Redirect("~/Page/Account/login.aspx"); }
         }
 
         
