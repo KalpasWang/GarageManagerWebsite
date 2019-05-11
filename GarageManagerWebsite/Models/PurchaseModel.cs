@@ -92,7 +92,7 @@ namespace GarageManagerWebsite.Models
         {
             try
             {
-                var amount = (from x in garageDBEntities.Purchases
+                int amount = (from x in garageDBEntities.Purchases
                               where x.CustomerId == customerId
                               && x.IsInCart
                               select x.Amount).Sum();

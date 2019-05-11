@@ -140,9 +140,9 @@
     <Content Include="Page\Account\register.aspx" />
     <Content Include="Page\Details.aspx" />
     <Content Include="Page\index.aspx" />
-    <Content Include="Page\Management.aspx" />
-    <Content Include="Page\ManageProduct.aspx" />
-    <Content Include="Page\ManageProductType.aspx" />
+    <Content Include="Page\Management\Management.aspx" />
+    <Content Include="Page\Management\ManageProduct.aspx" />
+    <Content Include="Page\Management\ManageProductType.aspx" />
     <Content Include="Page\PurchaseSuccess.aspx" />
     <Content Include="Page\ShoppingCart.aspx" />
     <Content Include="Web.config" />
@@ -224,25 +224,25 @@
     <Compile Include="Page\index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Page\Management.aspx.cs">
+    <Compile Include="Page\Management\Management.aspx.cs">
       <DependentUpon>Management.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Page\Management.aspx.designer.cs">
+    <Compile Include="Page\Management\Management.aspx.designer.cs">
       <DependentUpon>Management.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Page\ManageProduct.aspx.cs">
+    <Compile Include="Page\Management\ManageProduct.aspx.cs">
       <DependentUpon>ManageProduct.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Page\ManageProduct.aspx.designer.cs">
+    <Compile Include="Page\Management\ManageProduct.aspx.designer.cs">
       <DependentUpon>ManageProduct.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Page\ManageProductType.aspx.cs">
+    <Compile Include="Page\Management\ManageProductType.aspx.cs">
       <DependentUpon>ManageProductType.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Page\ManageProductType.aspx.designer.cs">
+    <Compile Include="Page\Management\ManageProductType.aspx.designer.cs">
       <DependentUpon>ManageProductType.aspx</DependentUpon>
     </Compile>
     <Compile Include="Page\PurchaseSuccess.aspx.cs">

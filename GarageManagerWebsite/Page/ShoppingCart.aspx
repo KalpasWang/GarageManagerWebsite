@@ -36,6 +36,6 @@
     <div>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:button runat="server" ID="ButtonContinue" text="Continue Shopping" CssClass="button"/>
-        <asp:button runat="server" ID="ButtonCheckOut" text="Check Out" CssClass="button"/>
+        <asp:button runat="server" ID="ButtonCheckOut" text="Check Out" CssClass="button" OnClick="ButtonCheckOut_Click"/>
     </div>
 </asp:Content>

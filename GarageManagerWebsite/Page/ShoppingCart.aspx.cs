@@ -150,6 +150,13 @@ namespace GarageManagerWebsite.Page
 
             PurchaseModel model = new PurchaseModel();
             model.DeletePurchase(purchaseId);
+
+            Response.Redirect("~/Page/ShoppingCart.aspx");
+        }
+
+        protected void ButtonCheckOut_Click(object sender, EventArgs e)
+        {
+            Server.Transfer("~/Page/PurchaseSuccess.aspx", true);
         }
     }
 }
